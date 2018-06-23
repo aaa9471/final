@@ -533,3 +533,46 @@
 1529743165 source:c:\users\user\desktop\miniporhect2\final\player.cpp
 	"player.h"
 
+1529753926 source:c:\users\sunlight\documents\github\final\final\gamewindow.cpp
+	"GameWindow.h"
+	<bits/stdc++.h>
+	"global.h"
+
+1529753926 c:\users\sunlight\documents\github\final\final\gamewindow.h
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro5.h>
+	"level.h"
+	"player.h"
+
+1529753926 c:\users\sunlight\documents\github\final\final\level.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<string>
+	<vector>
+	"global.h"
+
+1529753926 c:\users\sunlight\documents\github\final\final\global.h
+	<allegro5/allegro_font.h>
+
+1529753926 c:\users\sunlight\documents\github\final\final\player.h
+	<stdio.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+
+1529753926 source:c:\users\sunlight\documents\github\final\final\level.cpp
+	"level.h"
+
+1529753926 source:c:\users\sunlight\documents\github\final\final\main.cpp
+	"GameWindow.h"
+
+1529753926 source:c:\users\sunlight\documents\github\final\final\player.cpp
+	"player.h"
+
