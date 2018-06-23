@@ -8,7 +8,8 @@
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro5.h>
-
+#include "level.h"
+#include "player.h"
 #define GAME_INIT -1
 #define GAME_SETTING 0
 #define GAME_SELECT 1
@@ -45,7 +46,9 @@ private:
     ALLEGRO_EVENT event;
     ALLEGRO_TIMER *timer = NULL;
     ALLEGRO_SAMPLE *sample = NULL;
-
+    LEVEL *level = NULL;
+    Player* player1 = NULL;
+    Player* player2 = NULL;
     bool redraw = false;
 
 };

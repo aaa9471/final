@@ -2,7 +2,7 @@
 1529670775 source:c:\users\user\desktop\miniporhect2\final\main.cpp
 	"GameWindow.h"
 
-1529675174 c:\users\user\desktop\miniporhect2\final\gamewindow.h
+1529742441 c:\users\user\desktop\miniporhect2\final\gamewindow.h
 	<allegro5/allegro_audio.h>
 	<allegro5/allegro_acodec.h>
 	<allegro5/allegro_font.h>
@@ -10,6 +10,8 @@
 	<allegro5/allegro_primitives.h>
 	<allegro5/allegro_ttf.h>
 	<allegro5/allegro5.h>
+	"level.h"
+	"player.h"
 
 1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_audio.h
 	"allegro5/allegro.h"
@@ -255,12 +257,12 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_font.h"
 
-1529674904 source:c:\users\user\desktop\miniporhect2\final\gamewindow.cpp
+1529742469 source:c:\users\user\desktop\miniporhect2\final\gamewindow.cpp
 	"GameWindow.h"
 	<bits/stdc++.h>
 	"global.h"
 
-1529670308 c:\users\user\desktop\miniporhect2\final\global.h
+1529741096 c:\users\user\desktop\miniporhect2\final\global.h
 	<allegro5/allegro_font.h>
 
 1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_audio.h
@@ -509,4 +511,25 @@
 
 1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro5.h
 	"allegro.h"
+
+1529738161 source:c:\users\user\desktop\miniporhect2\final\level.cpp
+	"level.h"
+
+1529738161 c:\users\user\desktop\miniporhect2\final\level.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<string>
+	<vector>
+	"global.h"
+
+1529743099 c:\users\user\desktop\miniporhect2\final\player.h
+	<stdio.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+
+1529743165 source:c:\users\user\desktop\miniporhect2\final\player.cpp
+	"player.h"
 
