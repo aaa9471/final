@@ -8,10 +8,14 @@
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro5.h>
+//#include <vector>
+
 #include "level.h"
 //#include "Player.h"
 #include "Character.h" //***
 #include "Lanbow.h"
+#include "WaterBall.h"
+
 #define GAME_INIT -1
 #define GAME_SETTING 0
 #define GAME_SELECT 1
@@ -38,10 +42,15 @@ public:
     int process_event();
     void show_err_msg(int msg);
     void game_reset();
+    bool isonroad(int x, int y);
 
+    //void waterball_blow();
+    //Tower* create_tower(int);
 
 private:
     ALLEGRO_BITMAP *background = NULL;
+    ALLEGRO_BITMAP* waterball = NULL;
+    ALLEGRO_BITMAP* waterball_blow = NULL;
     ALLEGRO_DISPLAY *display = NULL;
     ALLEGRO_FONT *font = NULL;
     ALLEGRO_EVENT_QUEUE *event_queue = NULL;
@@ -52,14 +61,19 @@ private:
     Character* player1 = NULL;
     Character* player2 = NULL;
     bool redraw = false;
+    bool there_is_a_waterball = false;
+    bool waterball_blowing = false;
+    bool player1_captive = false;
 
-    int p1x, p1y, p2x, p2y;
-
+    int waterball_array[100] = {0};
+    int waterball_x[100] = {0};
+    int waterball_y[100] = {0};
+    int counter1 = 0;
+    int counter2 = 200;
+    int counter3 = 50;
+    //std::vector<WaterBall*> waterballSet;
+    //std::list<Tower*> towerSet;
     //ALLEGRO_BITMAP *lanbow = NULL;
 };
-
-
-
-
 
 #endif

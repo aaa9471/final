@@ -1,10 +1,12 @@
 #include"GameWindow.h"
 #include <bits/stdc++.h>
 #include"global.h"
-
+using namespace std;
 void GameWindow::game_init()
 {
     background = al_load_bitmap(".//template//StartBackground.jpg");
+    waterball = al_load_bitmap("./waterball.png");
+    waterball_blow = al_load_bitmap("./waterballblow.png");
     //sample = al_load_sample();
     player1 = new Lanbow;
     level = new LEVEL(1);
@@ -47,7 +49,30 @@ void GameWindow::draw_running_map(){
     }
     al_draw_filled_rectangle(field_width, 0, window_width, window_height, al_map_rgb(100, 100, 100));
 
-    player1->Draw();
+    //for(vector<WaterBall*>::iterator it = waterballSet.begin(); it != waterballSet.end(); it++)
+    //    (*it)->Draw();
+    for(int i=0; i<10; i++){
+        if(waterball_array[i]==1){
+            al_draw_bitmap(waterball, waterball_x[i], waterball_y[i], 0);
+            there_is_a_waterball = true;
+        }
+    }
+    for(int i=0; i<10; i++){
+        if(waterball_array[i]==1){
+            al_draw_bitmap(waterball, waterball_x[i], waterball_y[i], 0);
+            there_is_a_waterball = true;
+        }
+    }
+    if(waterball_blowing==true){
+        for(int i=0; i<10; i++){
+            if(waterball_array[i]==1){
+                al_draw_bitmap(waterball_blow, waterball_x[i]-40, waterball_y[i]-40, 0);
+            }
+        }
+    }
+
+    if(player1_captive==true) player1->Draw_captive();
+    else player1->Draw();
     al_flip_display();
 
 }
@@ -97,8 +122,7 @@ GameWindow::GameWindow(){
 }
 
 
-int GameWindow::game_run()
-{
+int GameWindow::game_run(){
     int error = GAME_CONTINUE;
 
     if (!al_is_event_queue_empty(event_queue)) {
@@ -110,8 +134,55 @@ int GameWindow::game_run()
 }
 
 int GameWindow::process_event(){
-    int i;
     int instruction = GAME_CONTINUE;
+    int future_x,future_y;
+    future_x = player1->position_x + player1->right * player1->get_speed() - player1->left * player1->get_speed();
+    future_y = player1->position_y + player1->down * player1->get_speed() - player1->up * player1->get_speed();
+    if (isonroad(future_x,future_y)){
+        player1->position_x = future_x;
+        player1->position_y = future_y;
+    }
+    if(there_is_a_waterball==true){
+        counter2-=1;
+    }
+    if(counter2<=0){
+        std::cout << "count_down_finish" << std::endl;
+        /*for(int i=0; i<10; i++){
+            if(waterball_array[i]==1){
+                al_draw_bitmap(waterball_blow, waterball_x[i], waterball_y[i], 0);
+                waterball_array[i] = 0;
+                waterball_x[i] = 0;
+                waterball_y[i] = 0;
+            }
+        }*/
+        there_is_a_waterball = false;
+        waterball_blowing = true;
+        counter2 = 200;
+    }
+    if(waterball_blowing==true){
+        counter3-=1;
+        for(int i=0; i<10; i++){
+            if(player1->get_x()>waterball_x[i]-40 && player1->get_x()<waterball_x[i]+80){
+                if(player1->get_y()>waterball_y[i]-40 && player1->get_y()<waterball_y[i]+80){
+                    player1_captive = true;
+                }
+            }
+        }
+    }
+    if(counter3<=0){
+        std::cout << "waterball_blowing_finish" << std::endl;
+        waterball_blowing = false;
+        for(int i=0; i<10; i++){
+            if(waterball_array[i]==1){
+                al_draw_bitmap(waterball_blow, waterball_x[i], waterball_y[i], 0);
+                waterball_array[i] = 0;
+                waterball_x[i] = 0;
+                waterball_y[i] = 0;
+            }
+        }
+        counter3 = 50;
+    }
+
 
     al_wait_for_event(event_queue, &event);
     redraw = false;
@@ -126,20 +197,16 @@ int GameWindow::process_event(){
     else if(event.type == ALLEGRO_EVENT_KEY_DOWN){
         switch (event.keyboard.keycode){
             case ALLEGRO_KEY_W:
-                std::cout << "w" << std::endl;
-                player1->mov_up();
+                player1->up = true;
                 break;
             case ALLEGRO_KEY_A:
-                std::cout << "a" << std::endl;
-                player1->mov_left();
+                player1->left = true;
                 break;
             case ALLEGRO_KEY_S:
-                std::cout << "s" << std::endl;
-                player1->mov_down();
+                player1->down = true;
                 break;
             case ALLEGRO_KEY_D:
-                std::cout << "d" << std::endl;
-                player1->mov_right();
+                player1->right = true;
                 break;
             case ALLEGRO_KEY_SPACE:
                 break;
@@ -156,7 +223,41 @@ int GameWindow::process_event(){
         }
     }
     else if(event.type==ALLEGRO_EVENT_KEY_UP){
+        switch (event.keyboard.keycode)
+        {
+        case ALLEGRO_KEY_W:
+            std::cout << "w" << std::endl;
+            player1->up = false;
+            break;
+        case ALLEGRO_KEY_A:
+            std::cout << "a" << std::endl;
+            player1->left = false;
+            break;
+        case ALLEGRO_KEY_S:
+            std::cout << "s" << std::endl;
+            player1->down = false;
+            break;
+        case ALLEGRO_KEY_D:
+            std::cout << "d" << std::endl;
+            player1->right = false;
+            break;
+        case ALLEGRO_KEY_SPACE:
+            std::cout << "space up" << std::endl;
+            //WaterBall *temp = new WaterBall(); //parameter is type of tower
+            //waterballSet.push_back(temp); //towerSet defined in .h
+            counter1 = 0;
+            while(1){
+                if(waterball_array[counter1]==0){
+                    waterball_array[counter1]=1;
+                    waterball_x[counter1] = player1->get_x();
+                    waterball_y[counter1] = player1->get_y();
 
+                    break;
+                }
+                else counter1+=1;
+            }
+            break;
+        }
     }
 
     if(redraw) {
@@ -212,4 +313,18 @@ void GameWindow::game_reset()
 
     // stop timer
     al_stop_timer(timer);
+}
+
+bool GameWindow::isonroad(int x,int y)
+{
+    int i = (x/40)+((y)/40)*15;
+    if (x<0||x>field_width||y<0||y>field_height)return false;
+    if (player1->right&&x%40!=0)i +=1;
+    if (player1->left&&x%40==0)i -= 1;
+    if (player1->up&&y&40==0)i -=15;
+    if (player1->down&&y%40!=0) i += 15;
+    //cout<<i<<endl;
+    if (level->isRoad(i))return true;
+    else return false;
+
 }

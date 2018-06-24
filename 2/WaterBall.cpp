@@ -1,12 +1,14 @@
 #include "WATERBALL.h"
+#include <iostream>
 
-void WaterBall::Draw(){
-    ALLEGRO_BITMAP *waterball = NULL;
+void WaterBall::draw(){
+    int draw_x = 50;
+    int draw_y = 50;
+    //std::cout << position_x << std::endl;
+    //std::cout << position_y << std::endl;
 
     waterball = al_load_bitmap("./waterball.png");
-
-    al_draw_bitmap(waterball, position_x, position_y, 0);
+    al_draw_bitmap(waterball, draw_x, draw_y, 0);
 
     return ;
 }
-

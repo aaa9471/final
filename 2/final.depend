@@ -1,0 +1,893 @@
+# depslib dependency file v1.0
+1529670775 source:c:\users\user\desktop\miniporhect2\final\main.cpp
+	"GameWindow.h"
+
+1529742441 c:\users\user\desktop\miniporhect2\final\gamewindow.h
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro5.h>
+	"level.h"
+	"player.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_audio.h
+	"allegro5/allegro.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro.h
+	"allegro5/base.h"
+	"allegro5/altime.h"
+	"allegro5/bitmap.h"
+	"allegro5/bitmap_draw.h"
+	"allegro5/bitmap_io.h"
+	"allegro5/bitmap_lock.h"
+	"allegro5/blender.h"
+	"allegro5/color.h"
+	"allegro5/config.h"
+	"allegro5/debug.h"
+	"allegro5/display.h"
+	"allegro5/drawing.h"
+	"allegro5/error.h"
+	"allegro5/events.h"
+	"allegro5/file.h"
+	"allegro5/fixed.h"
+	"allegro5/fmaths.h"
+	"allegro5/fshook.h"
+	"allegro5/fullscreen_mode.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/memory.h"
+	"allegro5/monitor.h"
+	"allegro5/mouse.h"
+	"allegro5/mouse_cursor.h"
+	"allegro5/path.h"
+	"allegro5/system.h"
+	"allegro5/threads.h"
+	"allegro5/timer.h"
+	"allegro5/tls.h"
+	"allegro5/transformations.h"
+	"allegro5/utf8.h"
+	"allegro5/alcompat.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\base.h
+	<errno.h>
+	<limits.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<sys/types.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"allegro5/internal/alconfig.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\internal\alconfig.h
+	"allegro5/platform/alplatf.h"
+	"allegro5/platform/alwatcom.h"
+	"allegro5/platform/almngw32.h"
+	"allegro5/platform/albcc32.h"
+	"allegro5/platform/almsvc.h"
+	"allegro5/platform/aliphonecfg.h"
+	"allegro5/platform/alosxcfg.h"
+	"allegro5/platform/alucfg.h"
+	"allegro5/platform/astdint.h"
+	"allegro5/platform/astdbool.h"
+
+1372600728 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alplatf.h
+
+1368941108 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1368941108 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1368941108 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1368941108 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\aliphonecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1368941108 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alosxcfg.h
+	"allegro5/platform/alplatf.h"
+
+1368941108 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"alunix.h"
+	"allegro5/platform/alplatf.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alunix.h
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\astdbool.h
+	<stdbool.h>
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\altime.h
+	"allegro5/base.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap.h
+	"allegro5/color.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\color.h
+	"allegro5/base.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_draw.h
+	"allegro5/bitmap.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_io.h
+	"allegro5/bitmap.h"
+	"allegro5/file.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\file.h
+	"allegro5/base.h"
+	"allegro5/path.h"
+	"allegro5/utf8.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\path.h
+	"allegro5/base.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\utf8.h
+	"allegro5/base.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_lock.h
+	"allegro5/bitmap.h"
+
+1372599484 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\blender.h
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\config.h
+	"allegro5/file.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\debug.h
+	<assert.h>
+	"allegro5/base.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\display.h
+	"allegro5/bitmap.h"
+	"allegro5/color.h"
+	"allegro5/events.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\events.h
+	"allegro5/altime.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\drawing.h
+	"allegro5/color.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\error.h
+	"allegro5/base.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\fixed.h
+	"allegro5/base.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\fmaths.h
+	"allegro5/base.h"
+	"allegro5/fixed.h"
+	"allegro5/inline/fmaths.inl"
+
+1368941108 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\inline\fmaths.inl
+	"allegro5/error.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\fshook.h
+	"allegro5/base.h"
+	"allegro5/file.h"
+	"allegro5/path.h"
+	<sys/types.h>
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\fullscreen_mode.h
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\joystick.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\keyboard.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+	"allegro5/keycodes.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\keycodes.h
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\memory.h
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\monitor.h
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\mouse.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\mouse_cursor.h
+	"allegro5/base.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\system.h
+	"allegro5/config.h"
+	"allegro5/path.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\threads.h
+	"allegro5/altime.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\timer.h
+	"allegro5/base.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\tls.h
+	"allegro5/base.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\transformations.h
+	"allegro5/display.h"
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\alcompat.h
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_font.h
+	"allegro5/allegro.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_image.h
+
+1372599532 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_primitives.h
+	<allegro5/allegro.h>
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_acodec.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_audio.h"
+
+1362298700 c:\users\user\desktop\finalproject\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_ttf.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_font.h"
+
+1529742469 source:c:\users\user\desktop\miniporhect2\final\gamewindow.cpp
+	"GameWindow.h"
+	<bits/stdc++.h>
+	"global.h"
+
+1529741096 c:\users\user\desktop\miniporhect2\final\global.h
+	<allegro5/allegro_font.h>
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_audio.h
+	"allegro5/allegro.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro.h
+	"allegro5/base.h"
+	"allegro5/altime.h"
+	"allegro5/bitmap.h"
+	"allegro5/bitmap_draw.h"
+	"allegro5/bitmap_io.h"
+	"allegro5/bitmap_lock.h"
+	"allegro5/blender.h"
+	"allegro5/color.h"
+	"allegro5/config.h"
+	"allegro5/debug.h"
+	"allegro5/display.h"
+	"allegro5/drawing.h"
+	"allegro5/error.h"
+	"allegro5/events.h"
+	"allegro5/file.h"
+	"allegro5/fixed.h"
+	"allegro5/fmaths.h"
+	"allegro5/fshook.h"
+	"allegro5/fullscreen_mode.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/memory.h"
+	"allegro5/monitor.h"
+	"allegro5/mouse.h"
+	"allegro5/mouse_cursor.h"
+	"allegro5/path.h"
+	"allegro5/system.h"
+	"allegro5/threads.h"
+	"allegro5/timer.h"
+	"allegro5/tls.h"
+	"allegro5/transformations.h"
+	"allegro5/utf8.h"
+	"allegro5/alcompat.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\base.h
+	<errno.h>
+	<limits.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<sys/types.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"allegro5/internal/alconfig.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\internal\alconfig.h
+	"allegro5/platform/alplatf.h"
+	"allegro5/platform/alwatcom.h"
+	"allegro5/platform/almngw32.h"
+	"allegro5/platform/albcc32.h"
+	"allegro5/platform/almsvc.h"
+	"allegro5/platform/aliphonecfg.h"
+	"allegro5/platform/alosxcfg.h"
+	"allegro5/platform/alucfg.h"
+	"allegro5/platform/astdint.h"
+	"allegro5/platform/astdbool.h"
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alplatf.h
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\aliphonecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alosxcfg.h
+	"allegro5/platform/alplatf.h"
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"alunix.h"
+	"allegro5/platform/alplatf.h"
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alunix.h
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\astdbool.h
+	<stdbool.h>
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\altime.h
+	"allegro5/base.h"
+
+1529672025 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap.h
+	"allegro5/color.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\color.h
+	"allegro5/base.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_draw.h
+	"allegro5/bitmap.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_io.h
+	"allegro5/bitmap.h"
+	"allegro5/file.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\file.h
+	"allegro5/base.h"
+	"allegro5/path.h"
+	"allegro5/utf8.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\path.h
+	"allegro5/base.h"
+
+1529672025 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\utf8.h
+	"allegro5/base.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_lock.h
+	"allegro5/bitmap.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\blender.h
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\config.h
+	"allegro5/file.h"
+
+1529672025 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\debug.h
+	<assert.h>
+	"allegro5/base.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\display.h
+	"allegro5/bitmap.h"
+	"allegro5/color.h"
+	"allegro5/events.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\events.h
+	"allegro5/altime.h"
+
+1529672025 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\drawing.h
+	"allegro5/color.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\error.h
+	"allegro5/base.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\fixed.h
+	"allegro5/base.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\fmaths.h
+	"allegro5/base.h"
+	"allegro5/fixed.h"
+	"allegro5/inline/fmaths.inl"
+
+1529672027 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\inline\fmaths.inl
+	"allegro5/error.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\fshook.h
+	"allegro5/base.h"
+	"allegro5/file.h"
+	"allegro5/path.h"
+	<sys/types.h>
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\fullscreen_mode.h
+
+1529672025 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\joystick.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\keyboard.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+	"allegro5/keycodes.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\keycodes.h
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\memory.h
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\monitor.h
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\mouse.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\mouse_cursor.h
+	"allegro5/base.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\system.h
+	"allegro5/config.h"
+	"allegro5/path.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\threads.h
+	"allegro5/altime.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\timer.h
+	"allegro5/base.h"
+
+1529672025 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\tls.h
+	"allegro5/base.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\transformations.h
+	"allegro5/display.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\alcompat.h
+
+1529672025 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_acodec.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_audio.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_font.h
+	"allegro5/allegro.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_image.h
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_primitives.h
+	<allegro5/allegro.h>
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_ttf.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_font.h"
+
+1529672026 c:\users\user\desktop\miniporhect2\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro5.h
+	"allegro.h"
+
+1529738161 source:c:\users\user\desktop\miniporhect2\final\level.cpp
+	"level.h"
+
+1529738161 c:\users\user\desktop\miniporhect2\final\level.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<string>
+	<vector>
+	"global.h"
+
+1529743099 c:\users\user\desktop\miniporhect2\final\player.h
+	<stdio.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+
+1529743165 source:c:\users\user\desktop\miniporhect2\final\player.cpp
+	"player.h"
+
+1529753926 source:c:\users\sunlight\documents\github\final\final\gamewindow.cpp
+	"GameWindow.h"
+	<bits/stdc++.h>
+	"global.h"
+
+1529753926 c:\users\sunlight\documents\github\final\final\gamewindow.h
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro5.h>
+	"level.h"
+	"player.h"
+
+1529753926 c:\users\sunlight\documents\github\final\final\level.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<string>
+	<vector>
+	"global.h"
+
+1529753926 c:\users\sunlight\documents\github\final\final\global.h
+	<allegro5/allegro_font.h>
+
+1529753926 c:\users\sunlight\documents\github\final\final\player.h
+	<stdio.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+
+1529753926 source:c:\users\sunlight\documents\github\final\final\level.cpp
+	"level.h"
+
+1529753926 source:c:\users\sunlight\documents\github\final\final\main.cpp
+	"GameWindow.h"
+
+1529753926 source:c:\users\sunlight\documents\github\final\final\player.cpp
+	"player.h"
+
+1529851834 source:c:\users\sunlight\desktop\final\gamewindow.cpp
+	"GameWindow.h"
+	<bits/stdc++.h>
+	"global.h"
+
+1529850696 c:\users\sunlight\desktop\final\gamewindow.h
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro5.h>
+	"level.h"
+	"Character.h"
+	"Lanbow.h"
+	"WaterBall.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_audio.h
+	"allegro5/allegro.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro.h
+	"allegro5/base.h"
+	"allegro5/altime.h"
+	"allegro5/bitmap.h"
+	"allegro5/bitmap_draw.h"
+	"allegro5/bitmap_io.h"
+	"allegro5/bitmap_lock.h"
+	"allegro5/blender.h"
+	"allegro5/color.h"
+	"allegro5/config.h"
+	"allegro5/debug.h"
+	"allegro5/display.h"
+	"allegro5/drawing.h"
+	"allegro5/error.h"
+	"allegro5/events.h"
+	"allegro5/file.h"
+	"allegro5/fixed.h"
+	"allegro5/fmaths.h"
+	"allegro5/fshook.h"
+	"allegro5/fullscreen_mode.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/memory.h"
+	"allegro5/monitor.h"
+	"allegro5/mouse.h"
+	"allegro5/mouse_cursor.h"
+	"allegro5/path.h"
+	"allegro5/system.h"
+	"allegro5/threads.h"
+	"allegro5/timer.h"
+	"allegro5/tls.h"
+	"allegro5/transformations.h"
+	"allegro5/utf8.h"
+	"allegro5/alcompat.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\base.h
+	<errno.h>
+	<limits.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<sys/types.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"allegro5/internal/alconfig.h"
+
+1527387192 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\internal\alconfig.h
+	"allegro5/platform/alplatf.h"
+	"allegro5/platform/alwatcom.h"
+	"allegro5/platform/almngw32.h"
+	"allegro5/platform/albcc32.h"
+	"allegro5/platform/almsvc.h"
+	"allegro5/platform/aliphonecfg.h"
+	"allegro5/platform/alosxcfg.h"
+	"allegro5/platform/alucfg.h"
+	"allegro5/platform/astdint.h"
+	"allegro5/platform/astdbool.h"
+
+1527387194 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alplatf.h
+
+1527387194 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1527387193 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1527387194 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1527387194 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1527387194 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\aliphonecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1527387193 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alosxcfg.h
+	"allegro5/platform/alplatf.h"
+
+1527387193 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"alunix.h"
+	"allegro5/platform/alplatf.h"
+
+1527387194 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alunix.h
+
+1527387194 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+
+1527387194 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\astdbool.h
+	<stdbool.h>
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\altime.h
+	"allegro5/base.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap.h
+	"allegro5/color.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\color.h
+	"allegro5/base.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_draw.h
+	"allegro5/bitmap.h"
+
+1527387192 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_io.h
+	"allegro5/bitmap.h"
+	"allegro5/file.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\file.h
+	"allegro5/base.h"
+	"allegro5/path.h"
+	"allegro5/utf8.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\path.h
+	"allegro5/base.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\utf8.h
+	"allegro5/base.h"
+
+1527387192 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_lock.h
+	"allegro5/bitmap.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\blender.h
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\config.h
+	"allegro5/file.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\debug.h
+	<assert.h>
+	"allegro5/base.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\display.h
+	"allegro5/bitmap.h"
+	"allegro5/color.h"
+	"allegro5/events.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\events.h
+	"allegro5/altime.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\drawing.h
+	"allegro5/color.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\error.h
+	"allegro5/base.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\fixed.h
+	"allegro5/base.h"
+
+1527387192 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\fmaths.h
+	"allegro5/base.h"
+	"allegro5/fixed.h"
+	"allegro5/inline/fmaths.inl"
+
+1527387193 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\inline\fmaths.inl
+	"allegro5/error.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\fshook.h
+	"allegro5/base.h"
+	"allegro5/file.h"
+	"allegro5/path.h"
+	<sys/types.h>
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\fullscreen_mode.h
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\joystick.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\keyboard.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+	"allegro5/keycodes.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\keycodes.h
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\memory.h
+
+1527387192 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\monitor.h
+
+1527387192 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\mouse.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\mouse_cursor.h
+	"allegro5/base.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\system.h
+	"allegro5/config.h"
+	"allegro5/path.h"
+
+1527387192 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\threads.h
+	"allegro5/altime.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\timer.h
+	"allegro5/base.h"
+
+1527387190 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\tls.h
+	"allegro5/base.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\transformations.h
+	"allegro5/display.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\alcompat.h
+
+1527387190 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_acodec.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_audio.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_font.h
+	"allegro5/allegro.h"
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_image.h
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_primitives.h
+	<allegro5/allegro.h>
+
+1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_ttf.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_font.h"
+
+1527387192 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro5.h
+	"allegro.h"
+
+1529844941 c:\users\sunlight\desktop\final\level.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<string>
+	<vector>
+	"global.h"
+
+1529853411 c:\users\sunlight\desktop\final\global.h
+	<allegro5/allegro_font.h>
+
+1529753926 source:c:\users\sunlight\desktop\final\level.cpp
+	"level.h"
+
+1529753926 source:c:\users\sunlight\desktop\final\main.cpp
+	"GameWindow.h"
+
+1529769311 source:c:\users\sunlight\desktop\final\character.cpp
+	"Character.h"
+
+1529852128 c:\users\sunlight\desktop\final\character.h
+	<stdio.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+	"Object.h"
+
+1529850868 source:c:\users\sunlight\desktop\final\lanbow.cpp
+	"Lanbow.h"
+
+1529853043 c:\users\sunlight\desktop\final\lanbow.h
+	"Character.h"
+
+1529841388 c:\users\sunlight\desktop\final\waterball.h
+	<stdio.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+	"Lanbow.h"
+	"Object.h"
+	"Character.h"
+
+1529841016 source:c:\users\sunlight\desktop\final\waterball.cpp
+	"WATERBALL.h"
+	<iostream>
+
+1529840106 c:\users\sunlight\desktop\final\object.h
+

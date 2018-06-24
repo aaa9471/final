@@ -7,19 +7,20 @@
 #include <allegro5/allegro_primitives.h>
 #include <vector>
 
-enum {LEFT=0, RIGHT, UP, DOWN};
+#include "Lanbow.h"
+#include "Object.h"
+#include "Character.h"
 
-class WaterBall
+class WaterBall : public Character
 {
 public:
-    WATERBALL(){};
-    ~WATERBALL();
+    WaterBall(){};
+    //~WATERBALL();
 
     void draw();
 
 protected:
-    int position_x;
-    int position_y;
+    ALLEGRO_BITMAP *waterball = NULL;
 };
 
 #endif // WATERBALL_H_INCLUDED
