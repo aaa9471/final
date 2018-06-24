@@ -1,13 +1,25 @@
 bool GameWindow::isonroad(int x,int y)
 {
-    int i = (x/40)+((y)/40)*15;
+    int i = (x/40)+((y+1)/40)*15;
+
     if (x<0||x>field_width-40||y<0||y+40>field_height)return false;
     if (player1->right&&x%40!=0)i +=1;
     if (player1->left&&(x+1)%40==0)i -= 1;
-    if (player1->up&&y&40==0)i -=15;
-    if (player1->down&&y%40!=0) i += 15;
-    cout<<x<<endl;
-    if (level->isRoad(i))return true;
-    else return false;
+    if (player1->up&&(y+1)%40==0)i -=15;
+    if (player1->down&&(y)%40!=0) i += 15;
+
+    cout<<x<<" "<<y<<" "<<i<<endl;
+    if (x%40!=0){
+        if (!level->isRoad(i)||!level->isRoad(i+1))return false;
+    }
+    if (y%40!=0&&(player1->right||player1->left)){
+        if (!level->isRoad(i)||!level->isRoad(i+1))return false;
+    }
+    if (!level->isRoad(i))return false;
+    return true;
+    /*else if (x%40!=0||y%40!=0){
+
+    }*/
+
 
 }
