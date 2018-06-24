@@ -7,10 +7,12 @@ void GameWindow::game_init()
     background = al_load_bitmap(".//template//StartBackground.jpg");
     waterball = al_load_bitmap("./waterball.png");
     waterball_blow = al_load_bitmap("./waterballblow.png");
+    font = al_load_ttf_font("Caviar_Dreams_Bold.ttf", 72, 0);
+
     //sample = al_load_sample();
     player1 = new Lanbow;
+    player2 = new Cunbow;
     level = new LEVEL(1);
-
 }
 void GameWindow::game_play()
 {
@@ -73,6 +75,12 @@ void GameWindow::draw_running_map(){
 
     if(player1_captive==true) player1->Draw_captive();
     else player1->Draw();
+    if(player2_captive==true) player2->Draw_captive();
+    else player2->Draw();
+
+    if(player1_win==true) al_draw_text(font, al_map_rgb(255, 255, 255), 50.0, 50.0, 0, "Lanbow Wins!");
+    else if(player2_win==true) al_draw_text(font, al_map_rgb(255, 255, 255), 50.0, 50.0, 0, "Cunbow Wins!");
+
     al_flip_display();
 
 }
@@ -135,13 +143,21 @@ int GameWindow::game_run(){
 
 int GameWindow::process_event(){
     int instruction = GAME_CONTINUE;
-    int future_x,future_y;
+    int future_x, future_y;
+    int future2_x, future2_y;
     future_x = player1->position_x + player1->right * player1->get_speed() - player1->left * player1->get_speed();
     future_y = player1->position_y + player1->down * player1->get_speed() - player1->up * player1->get_speed();
+    future2_x = player2->position_x + player2->right * player2->get_speed() - player2->left * player2->get_speed();
+    future2_y = player2->position_y + player2->down * player2->get_speed() - player2->up * player2->get_speed();
     if (isonroad(future_x,future_y)){
         player1->position_x = future_x;
         player1->position_y = future_y;
     }
+    if (isonroad(future2_x,future2_y)){
+        player2->position_x = future2_x;
+        player2->position_y = future2_y;
+    }
+
     if(there_is_a_waterball==true){
         counter2-=1;
     }
@@ -165,6 +181,13 @@ int GameWindow::process_event(){
             if(player1->get_x()>waterball_x[i]-40 && player1->get_x()<waterball_x[i]+80){
                 if(player1->get_y()>waterball_y[i]-40 && player1->get_y()<waterball_y[i]+80){
                     player1_captive = true;
+                    player1->change_speed();
+                }
+            }
+            if(player2->get_x()>waterball_x[i]-40 && player2->get_x()<waterball_x[i]+80){
+                if(player2->get_y()>waterball_y[i]-40 && player2->get_y()<waterball_y[i]+80){
+                    player2_captive = true;
+                    player2->change_speed();
                 }
             }
         }
@@ -183,6 +206,20 @@ int GameWindow::process_event(){
         counter3 = 50;
     }
 
+    if(player1_captive==true){
+        if(player2->position_x<player1->position_x+40 && player2->position_x>player1->position_x-40){
+            if(player2->position_y<player1->position_y+40 && player2->position_y>player1->position_y-40){
+                player2_win = true;
+            }
+        }
+    }
+    if(player2_captive==true){
+        if(player1->position_x<player2->position_x+40 && player1->position_x>player2->position_x-40){
+            if(player1->position_y<player2->position_y+40 && player1->position_y>player2->position_y-40){
+                player1_win = true;
+            }
+        }
+    }
 
     al_wait_for_event(event_queue, &event);
     redraw = false;
@@ -208,18 +245,22 @@ int GameWindow::process_event(){
             case ALLEGRO_KEY_D:
                 player1->right = true;
                 break;
-            case ALLEGRO_KEY_SPACE:
-                break;
+            /*case ALLEGRO_KEY_SPACE:
+                break;*/
             case ALLEGRO_KEY_UP:
+                player2->up = true;
                 break;
             case ALLEGRO_KEY_LEFT:
+                player2->left = true;
                 break;
             case ALLEGRO_KEY_DOWN:
+                player2->down = true;
                 break;
             case ALLEGRO_KEY_RIGHT:
+                player2->right = true;
                 break;
-            case ALLEGRO_KEY_ENTER:
-                break;
+            /*case ALLEGRO_KEY_ENTER:
+                break;*/
         }
     }
     else if(event.type==ALLEGRO_EVENT_KEY_UP){
@@ -251,6 +292,38 @@ int GameWindow::process_event(){
                     waterball_array[counter1]=1;
                     waterball_x[counter1] = player1->get_x();
                     waterball_y[counter1] = player1->get_y();
+
+                    break;
+                }
+                else counter1+=1;
+            }
+            break;
+        case ALLEGRO_KEY_UP:
+            std::cout << "up" << std::endl;
+            player2->up = false;
+            break;
+        case ALLEGRO_KEY_LEFT:
+            std::cout << "left" << std::endl;
+            player2->left = false;
+            break;
+        case ALLEGRO_KEY_DOWN:
+            std::cout << "down" << std::endl;
+            player2->down = false;
+            break;
+        case ALLEGRO_KEY_RIGHT:
+            std::cout << "right" << std::endl;
+            player2->right = false;
+            break;
+        case ALLEGRO_KEY_ENTER:
+            std::cout << "enter" << std::endl;
+            //WaterBall *temp = new WaterBall(); //parameter is type of tower
+            //waterballSet.push_back(temp); //towerSet defined in .h
+            counter1 = 0;
+            while(1){
+                if(waterball_array[counter1]==0){
+                    waterball_array[counter1]=1;
+                    waterball_x[counter1] = player2->get_x();
+                    waterball_y[counter1] = player2->get_y();
 
                     break;
                 }
@@ -317,14 +390,26 @@ void GameWindow::game_reset()
 
 bool GameWindow::isonroad(int x,int y)
 {
-    int i = (x/40)+((y)/40)*15;
-    if (x<0||x>field_width||y<0||y>field_height)return false;
-    if (player1->right&&x%40!=0)i +=1;
-    if (player1->left&&x%40==0)i -= 1;
-    if (player1->up&&y&40==0)i -=15;
-    if (player1->down&&y%40!=0) i += 15;
-    //cout<<i<<endl;
-    if (level->isRoad(i))return true;
-    else return false;
+    int i = (x/40)+((y+1)/40)*15;
+
+    if (x<0||x>field_width-40||y<0||y+40>field_height)return false;
+    if (player2->right&&x%40!=0)i +=1;
+    if (player2->left&&(x+1)%40==0)i -= 1;
+    if (player2->up&&(y+1)%40==0)i -=15;
+    if (player2->down&&(y)%40!=0) i += 15;
+
+    //cout<<x<<" "<<y<<" "<<i<<endl;
+    if (x%40!=0){
+        if (!level->isRoad(i)||!level->isRoad(i+1))return false;
+    }
+    if (y%40!=0&&(player2->right||player2->left)){
+        if (!level->isRoad(i)||!level->isRoad(i+1))return false;
+    }
+    if (!level->isRoad(i))return false;
+    return true;
+    /*else if (x%40!=0||y%40!=0){
+
+    }*/
+
 
 }

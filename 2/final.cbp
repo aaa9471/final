@@ -40,6 +40,8 @@
 		</Compiler>
 		<Unit filename="Character.cpp" />
 		<Unit filename="Character.h" />
+		<Unit filename="Cunbow.cpp" />
+		<Unit filename="Cunbow.h" />
 		<Unit filename="GameWindow.cpp" />
 		<Unit filename="GameWindow.h" />
 		<Unit filename="Lanbow.cpp" />

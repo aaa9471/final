@@ -15,6 +15,7 @@
 #include "Character.h" //***
 #include "Lanbow.h"
 #include "WaterBall.h"
+#include "Cunbow.h"
 
 #define GAME_INIT -1
 #define GAME_SETTING 0
@@ -64,6 +65,9 @@ private:
     bool there_is_a_waterball = false;
     bool waterball_blowing = false;
     bool player1_captive = false;
+    bool player2_captive = false;
+    bool player1_win = false;
+    bool player2_win = false;
 
     int waterball_array[100] = {0};
     int waterball_x[100] = {0};

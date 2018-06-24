@@ -576,12 +576,12 @@
 1529753926 source:c:\users\sunlight\documents\github\final\final\player.cpp
 	"player.h"
 
-1529851834 source:c:\users\sunlight\desktop\final\gamewindow.cpp
+1529854617 source:c:\users\sunlight\desktop\final\gamewindow.cpp
 	"GameWindow.h"
 	<bits/stdc++.h>
 	"global.h"
 
-1529850696 c:\users\sunlight\desktop\final\gamewindow.h
+1529858237 c:\users\sunlight\desktop\final\gamewindow.h
 	<allegro5/allegro_audio.h>
 	<allegro5/allegro_acodec.h>
 	<allegro5/allegro_font.h>
@@ -593,6 +593,7 @@
 	"Character.h"
 	"Lanbow.h"
 	"WaterBall.h"
+	"Cunbow.h"
 
 1527387191 c:\users\sunlight\desktop\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_audio.h
 	"allegro5/allegro.h"
@@ -858,10 +859,10 @@
 1529753926 source:c:\users\sunlight\desktop\final\main.cpp
 	"GameWindow.h"
 
-1529769311 source:c:\users\sunlight\desktop\final\character.cpp
+1529856982 source:c:\users\sunlight\desktop\final\character.cpp
 	"Character.h"
 
-1529852128 c:\users\sunlight\desktop\final\character.h
+1529856983 c:\users\sunlight\desktop\final\character.h
 	<stdio.h>
 	<string.h>
 	<allegro5/allegro.h>
@@ -890,4 +891,10 @@
 	<iostream>
 
 1529840106 c:\users\sunlight\desktop\final\object.h
+
+1529854552 source:c:\users\sunlight\desktop\final\cunbow.cpp
+	"Cunbow.h"
+
+1529854645 c:\users\sunlight\desktop\final\cunbow.h
+	"Character.h"
 

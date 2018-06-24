@@ -22,3 +22,8 @@ void Character::mov_right(){
     position_x += speed;
     return ;
 }
+
+void Character::change_speed(){
+    speed = 1;
+    return ;
+}

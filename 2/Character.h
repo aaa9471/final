@@ -29,6 +29,7 @@ public:
     int get_speed() {return speed;}
     int get_x(){return position_x;}
     int get_y(){return position_y;}
+    void change_speed();
 
     bool up = false;
     bool down = false;
