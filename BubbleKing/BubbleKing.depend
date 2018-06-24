@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1529676068 source:c:\users\peter wu\desktop\bubbleking\main.cpp
+	"GameWindow.h"
+
+1529867402 c:\users\peter wu\desktop\bubbleking\gamewindow.h
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro5.h>
+	"level.h"
+	"Character.h"
+	"Lanbow.h"
+	"WaterBall.h"
+	"Cunbow.h"
+
+1529867402 source:c:\users\peter wu\desktop\bubbleking\gamewindow.cpp
+	"GameWindow.h"
+	<bits/stdc++.h>
+	"global.h"
+
+1529867174 c:\users\peter wu\desktop\bubbleking\global.h
+	<allegro5/allegro_font.h>
+
+1529867207 source:c:\users\peter wu\desktop\bubbleking\character.cpp
+	"Character.h"
+
+1529867207 c:\users\peter wu\desktop\bubbleking\character.h
+	<stdio.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+	"Object.h"
+
+1529867090 source:c:\users\peter wu\desktop\bubbleking\lanbow.cpp
+	"Lanbow.h"
+
+1529867618 c:\users\peter wu\desktop\bubbleking\lanbow.h
+	"Character.h"
+
+1529867041 c:\users\peter wu\desktop\bubbleking\level.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<string>
+	<vector>
+	"global.h"
+
+1529867090 source:c:\users\peter wu\desktop\bubbleking\level.cpp
+	"level.h"
+
+1529866985 source:c:\users\peter wu\desktop\bubbleking\waterball.cpp
+	"WATERBALL.h"
+	<iostream>
+
+1529866863 source:c:\users\peter wu\desktop\bubbleking\cunbow.cpp
+	"Cunbow.h"
+
+1529867848 c:\users\peter wu\desktop\bubbleking\cunbow.h
+	"Character.h"
+
+1529766565 source:c:\users\peter wu\desktop\bubbleking\menu.cpp
+
+1529866985 c:\users\peter wu\desktop\bubbleking\waterball.h
+	<stdio.h>
+	<string.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+	"Lanbow.h"
+	"Object.h"
+	"Character.h"
+
+1529867017 c:\users\peter wu\desktop\bubbleking\object.h
+
