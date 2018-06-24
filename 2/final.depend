@@ -576,12 +576,12 @@
 1529753926 source:c:\users\sunlight\documents\github\final\final\player.cpp
 	"player.h"
 
-1529854617 source:c:\users\sunlight\desktop\final\gamewindow.cpp
+1529862066 source:c:\users\sunlight\desktop\final\gamewindow.cpp
 	"GameWindow.h"
 	<bits/stdc++.h>
 	"global.h"
 
-1529858237 c:\users\sunlight\desktop\final\gamewindow.h
+1529860900 c:\users\sunlight\desktop\final\gamewindow.h
 	<allegro5/allegro_audio.h>
 	<allegro5/allegro_acodec.h>
 	<allegro5/allegro_font.h>

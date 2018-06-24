@@ -42,9 +42,9 @@ void GameWindow::draw_running_map(){
         {
             char buffer[50];
             sprintf(buffer, "%d", i*15 + j);
-            if(level->isRoad(i*15 + j)) {
+            /*if(level->isRoad(i*15 + j)) {
                 al_draw_filled_rectangle(j*40, i*40, j*40+40, i*40+40, al_map_rgb(255, 244, 173));
-            }
+            }*/
             // For debug usage, if you want to create a new map, you may turn off this comment.
             // al_draw_text(font, al_map_rgb(0, 0, 0), j*40 + 20, i*40 + 14, ALLEGRO_ALIGN_CENTER, buffer);
         }
@@ -153,7 +153,7 @@ int GameWindow::process_event(){
         player1->position_x = future_x;
         player1->position_y = future_y;
     }
-    if (isonroad(future2_x,future2_y)){
+    if (isonroad2(future2_x,future2_y)){
         player2->position_x = future2_x;
         player2->position_y = future2_y;
     }
@@ -393,6 +393,30 @@ bool GameWindow::isonroad(int x,int y)
     int i = (x/40)+((y+1)/40)*15;
 
     if (x<0||x>field_width-40||y<0||y+40>field_height)return false;
+    if (player1->right&&x%40!=0)i +=1;
+    if (player1->left&&(x+1)%40==0)i -= 1;
+    if (player1->up&&(y+1)%40==0)i -=15;
+    if (player1->down&&(y)%40!=0) i += 15;
+
+    cout<<x<<" "<<y<<" "<<i<<endl;
+    if (x%40!=0){
+        if (!level->isRoad(i)||!level->isRoad(i+1))return false;
+    }
+    if (y%40!=0&&(player1->right||player1->left)){
+        if (!level->isRoad(i)||!level->isRoad(i+1))return false;
+    }
+    if (!level->isRoad(i))return false;
+    return true;
+    /*else if (x%40!=0||y%40!=0){
+
+    }*/
+}
+
+bool GameWindow::isonroad2(int x,int y)
+{
+    int i = (x/40)+((y+1)/40)*15;
+
+    if (x<0||x>field_width-40||y<0||y+40>field_height)return false;
     if (player2->right&&x%40!=0)i +=1;
     if (player2->left&&(x+1)%40==0)i -= 1;
     if (player2->up&&(y+1)%40==0)i -=15;
@@ -410,6 +434,4 @@ bool GameWindow::isonroad(int x,int y)
     /*else if (x%40!=0||y%40!=0){
 
     }*/
-
-
 }

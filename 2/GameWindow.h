@@ -44,6 +44,7 @@ public:
     void show_err_msg(int msg);
     void game_reset();
     bool isonroad(int x, int y);
+    bool isonroad2(int x, int y);
 
     //void waterball_blow();
     //Tower* create_tower(int);
