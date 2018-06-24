@@ -6,7 +6,7 @@ void GameWindow::game_init()
 {
     background = al_load_bitmap(".//template//StartBackground.jpg");
     //sample = al_load_sample();
-    Character1 = new Lanbow;
+    player1 = new Lanbow;
     level = new LEVEL(1);
 
 }
@@ -47,7 +47,7 @@ void GameWindow::draw_running_map(){
     }
     al_draw_filled_rectangle(field_width, 0, window_width, window_height, al_map_rgb(100, 100, 100));
 
-    Character1->Draw();
+    player1->Draw();
     al_flip_display();
 
 }
@@ -111,6 +111,14 @@ int GameWindow::game_run()
 
 int GameWindow::process_event(){
     int instruction = GAME_CONTINUE;
+    int future_x,future_y;
+    future_x = player1->position_x + player1->right * player1->get_speed() - player1->left * player1->get_speed();
+    future_y = player1->position_y + player1->down * player1->get_speed() - player1->up * player1->get_speed();
+    if (isonroad(future_x,future_y)){
+        player1->position_x = future_x;
+        player1->position_y = future_y;
+    }
+
 
     al_wait_for_event(event_queue, &event);
     redraw = false;
@@ -125,20 +133,16 @@ int GameWindow::process_event(){
     else if(event.type == ALLEGRO_EVENT_KEY_DOWN){
         switch (event.keyboard.keycode){
             case ALLEGRO_KEY_W:
-
-                if (Character1->get_y()>0&&level->isRoad(Character1->get_x()/40+(Character1->get_y()-Character1->get_speed())/40*15))Character1->mov_up();
+                player1->up = true;
                 break;
             case ALLEGRO_KEY_A:
-                std::cout << Character1->get_x()/40+Character1->get_y()/40*15+1<< std::endl;
-                if (Character1->get_x()>0&&level->isRoad((Character1->get_x()-Character1->get_speed())/40+Character1->get_y()/40*15))Character1->mov_left();
+                player1->left = true;
                 break;
             case ALLEGRO_KEY_S:
-                std::cout << "s" << std::endl;
-                cout<<Character1->get_x()/40+Character1->get_y()/40*15+15<<endl;
-                if (Character1->get_y()<field_height&&level->isRoad(Character1->get_x()/40+Character1->get_y()/40*15+15))Character1->mov_down();
+                player1->down = true;
                 break;
             case ALLEGRO_KEY_D:
-                if (Character1->get_x()<field_width&&level->isRoad(Character1->get_x()/40+Character1->get_y()/40*15+1))Character1->mov_right();
+                player1->right = true;
                 break;
             case ALLEGRO_KEY_SPACE:
                 break;
@@ -155,7 +159,25 @@ int GameWindow::process_event(){
         }
     }
     else if(event.type==ALLEGRO_EVENT_KEY_UP){
-
+        switch (event.keyboard.keycode)
+        {
+        case ALLEGRO_KEY_W:
+            std::cout << "w" << std::endl;
+            player1->up = false;
+            break;
+        case ALLEGRO_KEY_A:
+            std::cout << "a" << std::endl;
+            player1->left = false;
+            break;
+        case ALLEGRO_KEY_S:
+            std::cout << "s" << std::endl;
+            player1->down = false;
+            break;
+        case ALLEGRO_KEY_D:
+            std::cout << "d" << std::endl;
+            player1->right = false;
+            break;
+        }
     }
 
     if(redraw) {
@@ -213,13 +235,16 @@ void GameWindow::game_reset()
     al_stop_timer(timer);
 }
 
-bool
-GameWindow::isOnRoad_y()
+bool GameWindow::isonroad(int x,int y)
 {
-    int x,y;
-    int widthOfTower;
-
-    widthOfTower = 40;
-    x = Character1->get_x()/15;
+    int i = (x/40)+((y)/40)*15;
+    if (x<0||x>field_width||y<0||y>field_height)return false;
+    if (player1->right&&x%40!=0)i +=1;
+    if (player1->left&&x%40==0)i -= 1;
+    if (player1->up&&y&40==0)i -=15;
+    if (player1->down&&y%40!=0) i += 15;
+    cout<<i<<endl;
+    if (level->isRoad(i))return true;
+    else return false;
 
 }
